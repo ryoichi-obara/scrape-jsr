@@ -1,0 +1,40 @@
+{
+  "name": "scrape-jsr",
+  "description": "JSR",
+  "version": "1.0.0",
+  "author": "Ryoichi Obara <npmjs0102@gmail.com> (http://ryoichi0102.hatenablog.com/)",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "request": "^2.87.0"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.283.1",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "dotenv": "^6.0.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-install": "^1.1.0",
+    "gulp-zip": "^4.2.0",
+    "request": "^2.87.0"
+  },
+  "keywords": [
+    "AWS",
+    "JCP",
+    "JSR",
+    "Java",
+    "S3",
+    "cheerio"
+  ],
+  "license": "MIT",
+  "main": "build/Release/index.js",
+  "scripts": {
+    "build": "npm i && gulp clean && babel src -d build/Release && gulp install-dependancies",
+    "make": "npm run build && gulp build-zip",
+    "quick": "babel src -d build/Release && gulp build-zip",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

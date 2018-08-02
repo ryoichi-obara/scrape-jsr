@@ -1,3 +1,7 @@
+
+up.bat
+up.sh
+
 # Logs
 logs
 *.log
