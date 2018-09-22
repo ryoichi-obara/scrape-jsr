@@ -56,7 +56,8 @@ const replaceForSSML = text => text
   .replace('J2EETM', 'J2EE')
   .replace('J2SETM', 'J2SE')
   .replace('J2METM', 'J2ME')
-  .replace('EJBTM', 'EJB');
+  .replace('EJBTM', 'EJB')
+  .replace(' & ', ' and ');
 
 exports.handler = async () => {
   // main
